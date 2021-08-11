@@ -12,7 +12,7 @@ export const CalendarContainer = styled.View`
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border-bottom-width: 1px;
-  border-bottom-color: #3ad29f;
+  border-bottom-color: #e63874;
 
   /* justify-content: space-evenly; */
 `;

@@ -18,7 +18,9 @@ const PrivateHeader: React.FC<PrivateHeaderProps> = ({ screenName }) => {
         <MaterialIcons name="keyboard-arrow-left" size={50} color="#FFF" />
       </IconContainer>
       <TextContainer>
-        <CustomText color="#FFF">{screenName}</CustomText>
+        <CustomText color="#FFF" font="Montserrat_Bold">
+          {screenName}
+        </CustomText>
       </TextContainer>
     </Container>
   );

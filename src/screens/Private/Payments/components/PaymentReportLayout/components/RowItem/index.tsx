@@ -45,19 +45,13 @@ const RowItem: React.FC<RowItemProps> = ({ item, reportType }) => {
         </TypeColumn>
       )}
       <DateColumn>
-        <CustomText font="Montserrat" fontSize="14" textAlign="left" color="#279DD1">
+        <CustomText font="Montserrat" fontSize="14" textAlign="left" color="#FFF">
           06 Fev
         </CustomText>
       </DateColumn>
 
       <SourceColumn>
-        <CustomText
-          font="Montserrat"
-          fontSize="14"
-          textAlign="left"
-          color="#279DD1"
-          numberOfLines={1}
-        >
+        <CustomText font="Montserrat" fontSize="14" textAlign="left" color="#FFF" numberOfLines={1}>
           {item[sourceType as 'payee' | 'payer']} - {item.bank}
         </CustomText>
       </SourceColumn>
@@ -67,7 +61,7 @@ const RowItem: React.FC<RowItemProps> = ({ item, reportType }) => {
           font="Montserrat_Bold"
           fontSize="14"
           textAlign="right"
-          color="#279DD1"
+          color="#FFF"
           numberOfLines={1}
         >
           {item.formattedValue}

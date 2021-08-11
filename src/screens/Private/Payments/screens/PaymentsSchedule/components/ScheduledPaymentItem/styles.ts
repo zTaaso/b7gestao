@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   /* flex-direction: row; */
   border-bottom-width: 1px;
-  border-bottom-color: #279dd1;
+  border-bottom-color: #e63874;
   padding: 10px 10px;
 `;
 
@@ -56,13 +56,13 @@ export const IconContainer = styled.TouchableOpacity`
 
 export const CustomDay = styled.Text`
   padding: 5px 3px;
-  border: 2px solid #279dd1;
+  border: 2px solid #e63874;
   border-radius: 20px;
   min-width: 35px;
   align-items: center;
   justify-content: center;
 
-  color: #279dd1;
+  color: #e63874;
   font-family: 'Montserrat_Bold';
   font-size: 15px;
   text-align: center;

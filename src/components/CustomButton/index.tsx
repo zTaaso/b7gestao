@@ -20,7 +20,7 @@ const CustomButton: PropTypes<CustomButtonProps> = ({ children, textProps, ...pr
   if (props.type === 'gradient') {
     return (
       <TouchableOpacity {...props}>
-        <StyledLinearGradient colors={['#279DD1', '#23A0B1', '#3AD29F']} start={{ x: 1.1, y: 1.4 }}>
+        <StyledLinearGradient colors={['#30D88B', '#23A0B1', '#3AD29F']} start={{ x: 1.1, y: 1.4 }}>
           <ButtonText style={{ color: 'white' }}>{children}</ButtonText>
         </StyledLinearGradient>
       </TouchableOpacity>

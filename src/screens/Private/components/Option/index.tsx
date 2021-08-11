@@ -22,13 +22,13 @@ const OptionItem: React.FC<OptionProps> = ({ Icon, label, navigateTo }) => {
       </IconContainer>
 
       <Name>
-        <CustomText font="Montserrat_Bold" fontSize="17" color="#279DD1" textAlign="left">
+        <CustomText font="Montserrat" fontSize="17" color="#FFF" textAlign="left">
           {label}
         </CustomText>
       </Name>
 
       <ArrowIcon>
-        <MaterialIcons name="keyboard-arrow-right" size={27} color="#279DD1" />
+        <MaterialIcons name="keyboard-arrow-right" size={27} color="#FFF" />
       </ArrowIcon>
     </Container>
   );

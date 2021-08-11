@@ -38,22 +38,27 @@ const MessageItem: React.FC<MessageItemProps> = ({ data }) => {
 
       <MessageInfo>
         <ContentInfo>
-          <CustomText fontSize="14" font="Montserrat_Bold" textAlign="left" color="#279DD1">
+          <CustomText fontSize="14" font="Montserrat_Bold" textAlign="left" color="#FFF">
             {data.name}
           </CustomText>
 
-          <CustomText textAlign="left" fontSize="13" color="rgba(0, 0, 0, 0.6)" numberOfLines={1}>
+          <CustomText
+            textAlign="left"
+            fontSize="13"
+            color="rgba(255, 255, 255, 0.8)"
+            numberOfLines={1}
+          >
             {data.message}
           </CustomText>
         </ContentInfo>
 
         <TimeInfo>
-          <CustomText fontSize="13" font="Montserrat_Bold" color="#279DD1">
+          <CustomText fontSize="13" font="Montserrat" color="#30D88B">
             {data.time}
           </CustomText>
 
           <NonReadMsgs>
-            <CustomText fontSize="12" textAlign="left" color="#FFF">
+            <CustomText fontSize="12" textAlign="left" font="Montserrat_Bold" color="#000">
               {data.notReadMsgs}
             </CustomText>
           </NonReadMsgs>

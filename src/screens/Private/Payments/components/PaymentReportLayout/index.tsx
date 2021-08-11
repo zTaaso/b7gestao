@@ -70,25 +70,25 @@ const PaymentReportLayout: React.FC<PaymentReportLayoutProps> = ({ data, reportT
           <Row>
             {reportType === 'all' && (
               <TypeColumn>
-                <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#279DD1">
+                <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#30D88B">
                   Tipo
                 </CustomText>
               </TypeColumn>
             )}
             <DateColumn>
-              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#279DD1">
+              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#30D88B">
                 Data
               </CustomText>
             </DateColumn>
 
             <SourceColumn>
-              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#279DD1">
+              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="left" color="#30D88B">
                 {sourceEntity}
               </CustomText>
             </SourceColumn>
 
             <ValueColumn>
-              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="right" color="#279DD1">
+              <CustomText font="Montserrat_Bold" fontSize="16" textAlign="right" color="#30D88B">
                 Valor
               </CustomText>
             </ValueColumn>
@@ -102,13 +102,12 @@ const PaymentReportLayout: React.FC<PaymentReportLayoutProps> = ({ data, reportT
                 font="Montserrat_Bold"
                 fontSize="14"
                 textAlign="center"
-                color="#279DD1"
+                color="#30D88B"
                 underline
               >
                 {toggleText}
               </CustomText>
             </ShowAllContainer>
-            <InfoBoxes />
           </>
         }
       />

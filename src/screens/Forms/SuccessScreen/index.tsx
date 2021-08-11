@@ -35,7 +35,7 @@ const SuccessScreen: React.FC = () => {
   return (
     <FormLayout>
       <IconContainer>
-        <StyledLinearGradient colors={['#279DD1', '#23A0B1', '#3AD29F']} start={{ x: 1.1, y: 1.4 }}>
+        <StyledLinearGradient colors={['#30D88B', '#23A0B1', '#3AD29F']} start={{ x: 1.1, y: 1.4 }}>
           <FontAwesome5 name="check" size={70} color="white" />
         </StyledLinearGradient>
       </IconContainer>
@@ -51,7 +51,7 @@ const SuccessScreen: React.FC = () => {
 
       <ButtonContainer style={{ marginTop: 20 }}>
         <CustomButton
-          bgColor="#279DD1"
+          bgColor="#30D88B"
           textColor="white"
           onPress={() => navigation.navigate(redirectRoute)}
         >

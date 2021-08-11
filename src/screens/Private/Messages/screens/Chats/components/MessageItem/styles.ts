@@ -15,7 +15,7 @@ export const ProfilePic = styled.Image`
 
   border-radius: 50px;
   border-width: 2px;
-  border-color: #279dd1;
+  border-color: #30d88b;
 `;
 
 export const MessageInfo = styled.View`
@@ -23,7 +23,7 @@ export const MessageInfo = styled.View`
   flex-direction: row;
 
   /* align-items: center; */
-  border-bottom-color: #279dd1;
+  border-bottom-color: #30d88b;
   border-bottom-width: 1px;
 `;
 
@@ -52,5 +52,5 @@ export const NonReadMsgs = styled.View`
   min-width: 25px;
   border-radius: 15px;
 
-  background-color: #279dd1;
+  background-color: #30d88b;
 `;

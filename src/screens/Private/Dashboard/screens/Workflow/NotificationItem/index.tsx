@@ -66,7 +66,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ data }) => {
           </CustomText>
 
           <NonReadMsgs>
-            <CustomText font="Montserrat_Bold" color="white" fontSize="10">
+            <CustomText font="Montserrat_Bold" color="#000" fontSize="10">
               {data.notReadMsgs}
             </CustomText>
           </NonReadMsgs>
@@ -88,13 +88,13 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ data }) => {
               font="Montserrat_Bold"
               fontSize="13"
               underline
-              color="#FFF"
+              color="white"
               textAlign="left"
               style={{ marginRight: 10 }}
             >
               Responder
             </CustomText>
-            <MaterialIcons name="question-answer" size={18} color="white" />
+            <MaterialIcons name="question-answer" size={18} color="#30d88b" />
           </RespondContainer>
         </ExtraContent>
       )}

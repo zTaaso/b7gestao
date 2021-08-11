@@ -9,7 +9,7 @@ interface SendButtonProps extends TouchableOpacityProps {}
 
 const SendButton: React.FC<SendButtonProps> = (props) => (
   <Container {...props}>
-    <Ionicons name="send" size={24} color="white" />
+    <Ionicons name="send" size={24} color="#FFF" />
   </Container>
 );
 

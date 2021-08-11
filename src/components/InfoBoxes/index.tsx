@@ -25,12 +25,12 @@ const InfoBoxes: React.FC<ViewProps> = (props) => {
           <CashUpIcon width="60" height="60" />
         </IconContainer>
         <TextContainer>
-          <CustomText color="#279DD1" fontSize="12">
+          <CustomText color="#30D88B" fontSize="12">
             Acompanhe todas as suas movimentações em tempo real.
           </CustomText>
 
           <CustomText
-            color="#279DD1"
+            color="#30D88B"
             fontSize="12"
             style={{ marginTop: 15 }}
             underline
@@ -55,11 +55,11 @@ const InfoBoxes: React.FC<ViewProps> = (props) => {
           <DataCheckIcon width="60" height="60" />
         </IconContainer>
         <TextContainer>
-          <CustomText color="#279DD1" fontSize="12">
+          <CustomText color="#30D88B" fontSize="12">
             Mantenha seus dados salvos, organizados e seguros.
           </CustomText>
           <CustomText
-            color="#279DD1"
+            color="#30D88B"
             fontSize="12"
             style={{ marginTop: 15 }}
             underline

@@ -9,7 +9,7 @@ const FormHeader: React.FC = () => {
   return (
     <Container>
       <IconContainer onPress={() => navigation.goBack()}>
-        <MaterialIcons name="keyboard-arrow-left" size={50} color="#279DD1" />
+        <MaterialIcons name="keyboard-arrow-left" size={50} color="#30D88B" />
       </IconContainer>
     </Container>
   );

@@ -33,22 +33,22 @@ const Menu = () => {
     {
       title: 'Meu Cadastro',
       navigateTo: 'Profile',
-      Icon: () => <FontAwesome5 name="user-edit" size={22} color="white" />,
+      Icon: () => <FontAwesome5 name="user-edit" size={22} color="#30D88B" />,
     },
     {
       title: 'Mensagens',
       navigateTo: 'MessagesChats',
-      Icon: () => <Feather name="mail" size={28} color="white" />,
+      Icon: () => <Feather name="mail" size={28} color="#30D88B" />,
     },
     {
       title: 'Atividades',
       navigateTo: 'PaymentsTransfer',
-      Icon: () => <AntDesign name="barschart" size={28} color="white" />,
+      Icon: () => <AntDesign name="barschart" size={28} color="#30D88B" />,
     },
     {
       title: 'Agendamentos',
       navigateTo: 'PaymentsSchedule',
-      Icon: () => <Ionicons name="ios-calendar-sharp" size={28} color="white" />,
+      Icon: () => <Ionicons name="ios-calendar-sharp" size={28} color="#30D88B" />,
     },
   ];
 

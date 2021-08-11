@@ -119,7 +119,7 @@ const PaymentsSchedule: React.FC = () => {
       <Modalize
         ref={scheduleModalRef}
         modalStyle={{
-          backgroundColor: '#FFF',
+          backgroundColor: '#1a1f24',
         }}
         adjustToContentHeight
         snapPoint={480}

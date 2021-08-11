@@ -15,7 +15,7 @@ export const Picture = styled.Image`
 
   border-radius: 20px;
   border-width: 1px;
-  border-color: white;
+  border-color: #000;
 `;
 
 export const InfoContent = styled.View`
@@ -37,7 +37,7 @@ export const NonReadMsgs = styled.View`
   justify-content: center;
   border-radius: 10px;
 
-  background-color: #ff5d5d;
+  background-color: #30d88b;
 `;
 
 export const IconContainer = styled.TouchableOpacity`

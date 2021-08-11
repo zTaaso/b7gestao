@@ -8,13 +8,18 @@ import { ScrollView } from 'react-native';
 
 interface FormLayoutProps {
   disableKeyboardAvoidingView?: boolean;
+  gradient?: boolean;
 }
 
-const FormLayout: React.FC<FormLayoutProps> = ({ children, disableKeyboardAvoidingView }) => {
+const FormLayout: React.FC<FormLayoutProps> = ({
+  children,
+  gradient,
+  disableKeyboardAvoidingView,
+}) => {
   if (disableKeyboardAvoidingView) {
     return (
       <Container
-        colors={['#279DD1', '#48ACD8D8', '#FFF']}
+        colors={['#30D88B', '#48ACD8D8', '#FFF']}
         end={{ y: 0.2, x: 0.0 }}
         locations={[0.1, 0.2, 0.8]}
       >
@@ -26,12 +31,24 @@ const FormLayout: React.FC<FormLayoutProps> = ({ children, disableKeyboardAvoidi
     );
   }
 
+  if (gradient) {
+    return (
+      <Container colors={['#30D88B', '#1a1f24']} end={{ y: 0.15, x: 0 }} locations={[0.1, 0.5]}>
+        <FormHeader />
+        <Content>
+          <KeyboardAwareScrollView
+            contentContainerStyle={{ flexGrow: 1 }}
+            showsVerticalScrollIndicator={false}
+          >
+            {children}
+          </KeyboardAwareScrollView>
+        </Content>
+      </Container>
+    );
+  }
+
   return (
-    <Container
-      colors={['#279DD1', '#48ACD8D8', '#FFF']}
-      end={{ y: 0.2, x: 0.0 }}
-      locations={[0.1, 0.3, 0.8]}
-    >
+    <Content>
       <FormHeader />
       <Content>
         <KeyboardAwareScrollView
@@ -41,7 +58,7 @@ const FormLayout: React.FC<FormLayoutProps> = ({ children, disableKeyboardAvoidi
           {children}
         </KeyboardAwareScrollView>
       </Content>
-    </Container>
+    </Content>
   );
 };
 

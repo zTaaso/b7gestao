@@ -1,15 +1,19 @@
 import React from 'react';
-import { TextInputMaskProps } from 'react-native-masked-text';
-
+import { TextInputMask, TextInputMaskTypeProp } from 'react-native-masked-text';
 
 import { StyledInput } from './styles';
 
-const CustomMaskedInput: React.FC<TextInputMaskProps> = ({ children, ...props }) => {
-  return (
-    <StyledInput placeholderTextColor="rgba(0, 0, 0, 0.5)" {...props}>
-      {children}
-    </StyledInput>
-  );
-};
+interface CustomMaskedInputProps {
+  type: TextInputMaskTypeProp;
+}
+
+const CustomMaskedInput: React.FC<TextInputMask & CustomMaskedInputProps> = ({
+  children,
+  ...props
+}) => (
+  <StyledInput placeholderTextColor="rgba(255, 255, 255, 0.6)" {...props}>
+    {children}
+  </StyledInput>
+);
 
 export default CustomMaskedInput;

@@ -58,12 +58,12 @@ const VerifyEmail: React.FC = ({}) => {
         </CustomText>
       </TextContainer>
       <TouchableOpacity>
-        <CustomText fontSize="12" underline color="#279DD1">
+        <CustomText fontSize="12" underline color="#30D88B">
           Não recebeu o código? Clique aqui para reenviar.
         </CustomText>
       </TouchableOpacity>
       <ButtonContainer style={{ marginTop: 20 }}>
-        <CustomButton bgColor="#279DD1" textColor="white" onPress={handleNextPress}>
+        <CustomButton bgColor="#30D88B" textColor="white" onPress={handleNextPress}>
           Verificar
         </CustomButton>
       </ButtonContainer>

@@ -11,9 +11,11 @@ export const Container = styled.View`
   margin: 0 25px;
 
   margin-top: 15px;
-  background-color: white;
+  background-color: #1a1f24;
   border-radius: 10px;
+  /* border: 1px solid #30d88b; */
 
+  background-color: white;
   /* margin: 30px 20px 0; */
 `;
 

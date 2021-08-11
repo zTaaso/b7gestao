@@ -27,12 +27,12 @@ const ButtonSection = () => {
         <IconContainer>
           <CashIcon width="35" height="35" />
         </IconContainer>
-        <CustomText color="#279DD1" fontSize="12">
+        <CustomText color="#000" font="Montserrat_Bold" fontSize="12">
           Pagamentos
         </CustomText>
       </ButtonBox>
 
-      {/* <ButtonBox
+      <ButtonBox
         style={{
           shadowColor: '#000',
           shadowOffset: { width: 1, height: 1 },
@@ -46,10 +46,10 @@ const ButtonSection = () => {
         <IconContainer>
           <TagIcon width="35" height="35" />
         </IconContainer>
-        <CustomText color="#279DD1" fontSize="12">
+        <CustomText color="#000" font="Montserrat_Bold" fontSize="12">
           Vendas
         </CustomText>
-      </ButtonBox> */}
+      </ButtonBox>
 
       <ButtonBox
         style={{
@@ -65,7 +65,7 @@ const ButtonSection = () => {
         <IconContainer>
           <Feather name="mail" size={35} color="#3AD29F" />
         </IconContainer>
-        <CustomText color="#279DD1" fontSize="12">
+        <CustomText color="#000" font="Montserrat_Bold" fontSize="12">
           Mensagens
         </CustomText>
       </ButtonBox>

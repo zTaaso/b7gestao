@@ -6,13 +6,13 @@ export const StyledInput = styled.TextInput`
   justify-content: center;
   font-size: 16px;
   font-family: 'Montserrat';
-  border-bottom-color: #279dd1;
+  border-bottom-color: #30d88b;
   border-bottom-width: 1px;
 
   padding: 10px 15px;
   margin-top: 15px;
 
-  color: black;
+  color: white;
 
   /* opacity: 1; */
   /* min-width: 100px; */

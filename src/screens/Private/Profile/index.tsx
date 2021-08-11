@@ -9,17 +9,17 @@ const optionsItems = [
   {
     label: 'Dados Pessoais',
     navigateTo: 'ProfilePersonal',
-    Icon: () => <Ionicons name="person" size={24} color="#279DD1" />,
+    Icon: () => <Ionicons name="person" size={24} color="#30D88B" />,
   },
   {
     label: 'Segurança',
     navigateTo: 'ProfileSecurity',
-    Icon: () => <MaterialIcons name="security" size={24} color="#279DD1" />,
+    Icon: () => <MaterialIcons name="security" size={24} color="#30D88B" />,
   },
   {
     label: 'Empresa',
     navigateTo: 'ProfileCompany',
-    Icon: () => <MaterialIcons name="business-center" size={24} color="#279DD1" />,
+    Icon: () => <MaterialIcons name="business-center" size={24} color="#30D88B" />,
   },
 ];
 

@@ -1794,6 +1794,14 @@
   resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.40.tgz#ded0240b6ea1ad7afc1e60374c49087aaea5dbd8"
   integrity sha512-VbjwR1fhsn2h2KXAY4oy1fm7dCxaKy0D+deTb8Ilc3Eo3rc5+5eA4rfYmZaHgNJKxVyI0f6WIXzO2zLkVmQPHA==
 
+"@types/hoist-non-react-statics@*":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/intl@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/intl/-/intl-1.2.0.tgz#1245511f13064402087979f498764611a3c758fc"
@@ -1846,6 +1854,22 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"
   integrity sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==
 
+"@types/react-native-calendars@^1.1264.2":
+  version "1.1264.2"
+  resolved "https://registry.yarnpkg.com/@types/react-native-calendars/-/react-native-calendars-1.1264.2.tgz#127ef93ccbc707de87373176b61c195b73d9d0b0"
+  integrity sha512-nsNwzqF7s4FzNtxSG4Rcr3FQ9qOdZUJcrXKo7aCEgvR9QmU5K09QhobR+PTe93opB4a1ldvLmsFGTiOAYeeaBg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    "@types/xdate" "*"
+
+"@types/react-native@*":
+  version "0.64.12"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.12.tgz#1c6a3226c26d7a5949cdf8878e6cfe95fe0951d6"
+  integrity sha512-sw6WGSaL219zqrgdb4kQUtFB9iGXC/LmecLZ+UUWEgwYvD0YH81FqWYmONa2HuTkOFAsxu2bK4DspkWRUHIABQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@~0.63.2":
   version "0.63.53"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.53.tgz#776dc1b05d649cb41b05fdff06e41ab9066538ca"
@@ -1879,6 +1903,39 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+
+"@types/styled-components-react-native@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@types/styled-components-react-native/-/styled-components-react-native-5.1.1.tgz#dcee7171b3844ce00a8303d8f5fcaeae7b25915d"
+  integrity sha512-1CJvTkaTb9YJXjmecZAZNyMHlvGdNtunRrOeyaXYdOzLKgwABIeEcZiO/TKT7CAzLdgPwBUj5Z4ixe4Vk5ndlw==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    "@types/styled-components" "*"
+
+"@types/styled-components@*":
+  version "5.1.12"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.12.tgz#1a3679942746adecd1e736bfc47aea2c938a7d9a"
+  integrity sha512-sTjc0+gMl08JvOHchQKgEGbbiSexSvWg5khUNSH4kosb7Tl4782AtfWMkAhQmeXMg2vIn6PthGVHFW+U/Dpihg==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    csstype "^3.0.2"
+
+"@types/styled-components@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.6.tgz#b47460f1684072576999955b5b5153e6f238622c"
+  integrity sha512-YN1j99dOL92T+76qhQcrPUb2nKZLzawko9j3IIwTHdKloMx20WwcGkBwdpbi8SpAkTc362rgfIllqPdSUplmRw==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
+    csstype "^3.0.2"
+
+"@types/xdate@*":
+  version "0.8.32"
+  resolved "https://registry.yarnpkg.com/@types/xdate/-/xdate-0.8.32.tgz#52f1bc426cc6929474034e5e3b83f82f43e25dcd"
+  integrity sha512-giM6hmU4ZCCAQj8BVSMNMA8hQwvKuWewLIe7r+G5NtGvehqW9jXdF/V6CzzkQYgHsk+67/udxql3RdfR8zqSNA==
 
 "@types/yargs-parser@*":
   version "20.2.1"

@@ -5,8 +5,9 @@ import Toast from 'react-native-toast-message';
 
 import ProfileIcon from '~/src/assets/icons/profile_icon.svg';
 import AppLogo from '../AppLogo';
+import B7Logo from '~/src/assets/images/b7gestao.png';
 
-import { Container, IconContainer } from './styles';
+import { Container, IconContainer, LogoImage, LogoContainer } from './styles';
 import { useToggleDashboardModal } from '~/src/context/DashboardContext';
 
 const DashboardHeader: React.FC = () => {
@@ -31,13 +32,15 @@ const DashboardHeader: React.FC = () => {
   return (
     <Container>
       <IconContainer onPress={handleProfileButtonPress}>
-        <ProfileIcon width="30" height="30" />
+        <ProfileIcon width="27" height="27" />
       </IconContainer>
 
-      <AppLogo />
+      <LogoContainer>
+        <LogoImage source={B7Logo} resizeMode="center" />
+      </LogoContainer>
 
       <IconContainer onPress={handleButtonPress}>
-        <Fontisto name="bell-alt" size={30} color="#3AD29F" />
+        <Fontisto name="bell-alt" size={27} color="#3AD29F" />
       </IconContainer>
     </Container>
   );

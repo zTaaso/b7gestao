@@ -19,5 +19,20 @@ export const IconContainer = styled.TouchableOpacity`
   /* border: 1px solid blue; */
   padding: 13px;
   border-radius: 40px;
-  background-color: white;
+  /* background-color: white; */
+  border: 1px solid #30d88b;
+`;
+
+export const LogoContainer = styled.View`
+  /* border: 1px solid red; */
+
+  align-items: center;
+
+  max-height: 100px;
+  max-width: 100px;
+`;
+
+export const LogoImage = styled.Image`
+  width: 110px;
+  height: 70px;
 `;

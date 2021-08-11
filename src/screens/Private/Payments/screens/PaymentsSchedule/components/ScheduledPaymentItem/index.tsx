@@ -32,10 +32,10 @@ const ScheduledPaymentItem: React.FC<ScheduledPaymentItemProps> = ({ data }) => 
         <DateInfo>
           <CustomDay>{data.date.monthDay}</CustomDay>
           <DateInfoColumn>
-            <CustomText font="Montserrat_Light" fontSize="14" color="#279dd1">
+            <CustomText font="Montserrat_Light" fontSize="14" color="#E63874">
               {data.date.weekDay}
             </CustomText>
-            <CustomText font="Montserrat_Bold" fontSize="18" color="#279dd1">
+            <CustomText font="Montserrat_Bold" fontSize="18" color="#E63874">
               {data.date.month}
             </CustomText>
           </DateInfoColumn>
@@ -48,7 +48,7 @@ const ScheduledPaymentItem: React.FC<ScheduledPaymentItemProps> = ({ data }) => 
         </Description>
 
         <PriceInfo>
-          <CustomText font="Montserrat_Light" fontSize="14" color="#279dd1">
+          <CustomText font="Montserrat_Light" fontSize="14" color="#E63874">
             Total
           </CustomText>
           <CustomText font="Montserrat_Bold" fontSize="14" numberOfLines={1}>
@@ -57,28 +57,28 @@ const ScheduledPaymentItem: React.FC<ScheduledPaymentItemProps> = ({ data }) => 
         </PriceInfo>
 
         <IconContainer onPress={() => setIsExpanded(!isExpanded)}>
-          <MaterialIcons name={`keyboard-arrow-${arrowDirection}`} size={28} color="#279DD1" />
+          <MaterialIcons name={`keyboard-arrow-${arrowDirection}`} size={28} color="#E63874" />
         </IconContainer>
       </VisibleContent>
 
       {isExpanded && (
         <ExtraContent>
           <CustomText fontSize="13" textAlign="left">
-            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#279DD1">
+            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#E63874">
               Pagador:
             </CustomText>{' '}
             {data.payer}
           </CustomText>
 
           <CustomText fontSize="13" textAlign="left">
-            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#279DD1">
+            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#E63874">
               Beneficiário:
             </CustomText>{' '}
             {data.payee}
           </CustomText>
 
           <CustomText fontSize="13" textAlign="left">
-            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#279DD1">
+            <CustomText font="Montserrat_Bold" fontSize="13" textAlign="left" color="#E63874">
               Descrição:
             </CustomText>{' '}
             {data.description}

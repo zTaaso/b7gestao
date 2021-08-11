@@ -26,29 +26,29 @@ const Balance = () => {
     >
       <Row>
         <TextContainer>
-          <CustomText color="#279DD1" fontSize="15" font="Montserrat_Bold">
+          <CustomText color="#30D88B" fontSize="15" font="Montserrat_Bold">
             Saldo em Contas
           </CustomText>
         </TextContainer>
         <TouchableOpacity onPress={() => setBalanceVisible(!balanceVisible)}>
-          <MaterialCommunityIcons name={eyeIcon} size={24} color="#279DD1" />
+          <MaterialCommunityIcons name={eyeIcon} size={24} color="#30D88B" />
         </TouchableOpacity>
       </Row>
 
       <Row>
         <TextContainer style={{ alignItems: 'center' }}>
-          <CustomText color="#279DD1" fontSize="13" textAlign="left">
+          <CustomText color="#000" fontSize="13" textAlign="left">
             Total:
           </CustomText>
 
-          <CustomText color="#279DD1" fontSize="30" textAlign="left">
+          <CustomText color="#000" fontSize="30" textAlign="left">
             {balanceVisibleValue}
           </CustomText>
         </TextContainer>
       </Row>
       <Row>
         <TextContainer style={{ alignItems: 'center' }}>
-          <CustomText color="#279DD1" fontSize="12">
+          <CustomText color="#000" fontSize="12">
             Última despesa em: Pagamento de Encomen...
           </CustomText>
         </TextContainer>

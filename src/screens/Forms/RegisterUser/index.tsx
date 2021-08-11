@@ -49,7 +49,7 @@ const RegisterUser: React.FC = ({}) => {
 
       <ButtonContainer style={{ marginTop: 20 }}>
         <CustomButton
-          bgColor="#279DD1"
+          bgColor="#30D88B"
           textColor="white"
           onPress={() => navigation.navigate('RegisterCompany')}
         >

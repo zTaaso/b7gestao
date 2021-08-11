@@ -66,7 +66,7 @@ const PaymentActionLayout: React.FC<PaymentActionLayoutProps> = (props) => {
 
   return (
     <Container>
-      <CustomText font="Montserrat_Bold" color="#279DD1">
+      <CustomText font="Montserrat_Bold" color="#30D88B">
         {props.titleText}
       </CustomText>
       <InputContainer style={{ paddingBottom: props.titleText ? 25 : 0 }}>
@@ -118,7 +118,7 @@ const PaymentActionLayout: React.FC<PaymentActionLayoutProps> = (props) => {
         }}
       >
         <CustomButton
-          bgColor="#279DD1"
+          bgColor="#30D88B"
           textColor="white"
           onPress={handleSubmitPress}
           textProps={{ fontSize: 18 }}

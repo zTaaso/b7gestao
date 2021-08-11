@@ -10,7 +10,7 @@ export const Container = styled.View`
   padding: 5px 5px;
 
   margin-top: 20px;
-  background-color: #279dd1;
+  background-color: #30d88b;
 
   border-radius: 30px;
   border-bottom-left-radius: 0;
@@ -67,7 +67,7 @@ export const ProfilePic = styled.Image`
 
   border-radius: 50px;
   border-width: 2px;
-  border-color: #fff;
+  border-color: #30d88b;
 
   background-color: rgba(255, 255, 255, 0.9);
 `;

@@ -30,12 +30,12 @@ const CreditCard = () => {
     >
       <Row>
         <TextContainer>
-          <CustomText color="#279DD1" fontSize="15" font="Montserrat_Bold">
+          <CustomText color="#30D88B" fontSize="15" font="Montserrat_Bold">
             Cartão de Crédito
           </CustomText>
         </TextContainer>
         <TouchableOpacity onPress={handleButtonPress}>
-          <SimpleLineIcons name="arrow-right" size={20} color="#279DD1" />
+          <SimpleLineIcons name="arrow-right" size={20} color="#30D88B" />
         </TouchableOpacity>
       </Row>
 
@@ -48,10 +48,10 @@ const CreditCard = () => {
             justifyContent: 'center',
           }}
         >
-          <CustomText color="#279DD1" fontSize="20" font="Montserrat_Bold">
+          <CustomText color="#30D88B" fontSize="20" font="Montserrat_Bold">
             Nubank:{' '}
           </CustomText>
-          <CustomText color="#279DD1" fontSize="16" font="Montserrat">
+          <CustomText color="#000" fontSize="16" font="Montserrat">
             xxxx xxxx xxxx 1234
           </CustomText>
         </TextContainer>

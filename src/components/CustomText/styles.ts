@@ -11,7 +11,7 @@ export interface StyledTextTypes extends TextProps {
 }
 
 export const StyledText = styled.Text<StyledTextTypes>`
-  color: ${(props) => props.color || '#000'};
+  color: ${(props) => props.color || '#FFF'};
   /* flex: 1; */
   text-align: ${(props) => props.textAlign || 'center'};
   font-size: ${(props) => props.fontSize || 20}px;

@@ -10,8 +10,10 @@ export const Container = styled.View`
 
   margin: 0 25px;
   margin-top: 30px;
-  background-color: white;
+  background-color: #1a1f24;
   border-radius: 10px;
+
+  background-color: white;
 
   /* margin: 30px 20px 0; */
 `;
@@ -22,7 +24,7 @@ export const IconContainer = styled.TouchableOpacity`
   /* border: 1px solid blue; */
   padding: 13px;
   border-radius: 40px;
-  background-color: white;
+  background-color: #1a1f24;
 `;
 
 export const Row = styled.View`

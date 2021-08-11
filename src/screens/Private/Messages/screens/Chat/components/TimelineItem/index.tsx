@@ -21,7 +21,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data }) => {
 
   const { textColor, bgColor, alignItems } = React.useMemo(() => {
     const textColor = data?.message?.isSent ? 'white' : 'black';
-    const bgColor = data?.message?.isSent ? '#3ad29f' : 'white';
+    const bgColor = data?.message?.isSent ? '#30D88B' : 'white';
     const alignItems = data?.message?.isSent ? 'flex-end' : 'flex-start';
 
     return { textColor, bgColor, alignItems };
@@ -66,8 +66,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data }) => {
     }
   }, [selectedMessages]);
 
-  return React.useMemo(() => {
-    return (
+  return React.useMemo(
+    () => (
       <Container
         alignItems={alignItems}
         onLongPress={() => {
@@ -97,8 +97,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data }) => {
           </MessageDate>
         </MessageContent>
       </Container>
-    );
-  }, [isSelected, isSelectingMessages]);
+    ),
+    [isSelected, isSelectingMessages]
+  );
 };
 
 export default React.memo(TimelineItem);

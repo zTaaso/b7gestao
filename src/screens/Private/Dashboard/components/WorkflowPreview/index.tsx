@@ -51,7 +51,7 @@ const WorkflowPreview = () => {
     >
       <Row>
         <TextContainer>
-          <CustomText color="#FFF" fontSize="15" font="Montserrat_Bold">
+          <CustomText color="#30D88B" fontSize="15" font="Montserrat_Bold">
             Workflow
           </CustomText>
         </TextContainer>
@@ -66,7 +66,7 @@ const WorkflowPreview = () => {
       </Row>
       <Row>
         <IconContainer onPress={() => workflowModalRef.current?.open()}>
-          <SimpleLineIcons name="arrow-down" size={24} color="white" />
+          <SimpleLineIcons name="arrow-down" size={24} color="#30D88B" />
         </IconContainer>
       </Row>
     </Container>

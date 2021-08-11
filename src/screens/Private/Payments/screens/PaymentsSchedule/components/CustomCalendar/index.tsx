@@ -91,15 +91,18 @@ const CustomCalendar: React.FC<CustomCalendarProps> = (props) => {
     <Calendar
       markedDates={markedDates}
       theme={{
-        textDayFontFamily: 'Montserrat_Bold',
-        dayTextColor: '#279DD1',
-        monthTextColor: '#279DD1',
-        todayTextColor: '#3AD29F',
-        backgroundColor: '#3AD29F',
-        dotColor: '#3AD29F',
+        textDayFontFamily: 'Montserrat',
+        dayTextColor: '#FFF',
+        monthTextColor: '#E63874',
+        todayTextColor: '#E63874',
+        backgroundColor: '#1a1f24',
+        calendarBackground: '#1a1f24',
+        dotColor: '#E63874',
         textMonthFontFamily: 'Montserrat_Bold',
-        selectedDayBackgroundColor: '#279DD1',
+        textDisabledColor: '#666',
+        selectedDayBackgroundColor: '#E63874',
         selectedDayTextColor: 'white',
+        arrowColor: '#E63874',
       }}
       monthFormat="MMMM - yyyy"
       onDayPress={handleDayPress}

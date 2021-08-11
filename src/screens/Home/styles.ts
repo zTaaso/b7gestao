@@ -9,6 +9,7 @@ export const Container = styled.View`
   /* border: 1px solid red; */
   padding: 50px 0 10px;
 
+  background-color: #1a1f24;
   /* align-items: center; */
   justify-content: space-evenly;
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import { LogBox } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import Toast from 'react-native-toast-message';
+import { StatusBar } from 'expo-status-bar';
 
 import {
   useFonts,
@@ -34,6 +35,7 @@ export default function App() {
 
   return (
     <DashboardProvider>
+      <StatusBar translucent style="light" />
       <Router />
 
       <Toast ref={(ref) => Toast.setRef(ref)} />

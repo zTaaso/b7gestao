@@ -9,8 +9,9 @@ export const Container = styled.View`
   margin: 0 25px;
 
   margin-top: 15px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 10px;
+  /* background-color: white; */
 
   /* margin: 30px 20px 0; */
 `;
@@ -31,7 +32,7 @@ export const ButtonBox = styled.TouchableOpacity`
   /* height: */
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #1a1f24;
 
   margin: 0 2px;
 
@@ -39,4 +40,5 @@ export const ButtonBox = styled.TouchableOpacity`
   border-radius: 20px;
 
   padding: 15px 10px;
+  background-color: white;
 `;

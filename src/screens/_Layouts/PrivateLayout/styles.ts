@@ -7,5 +7,7 @@ export const Container = styled(LinearGradient)`
 
 export const Content = styled.View`
   flex: 1;
+  background-color: #1a1f24;
+
   /* border: 1px solid red; */
 `;

@@ -16,7 +16,7 @@ export const StyledButton = styled.TouchableOpacity<CustomButtonTypes>`
 `;
 
 export const ButtonText = styled.Text`
-  color: #279dd1;
+  color: #30d88b;
   /* flex: 1; */
   font-size: 20px;
   text-transform: uppercase;

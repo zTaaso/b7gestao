@@ -26,25 +26,25 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ data }) => {
       <InfoContent>
         <CustomText
           font="Montserrat_Bold"
-          color="white"
+          color="black"
           fontSize="12"
           textAlign="left"
           numberOfLines={1}
         >
           Nova notificação de {data.name}
         </CustomText>
-        <CustomText color="white" fontSize="12" textAlign="left">
+        <CustomText color="black" fontSize="12" textAlign="left">
           {data.institution}
         </CustomText>
       </InfoContent>
 
       <MessageInfo>
-        <CustomText font="Montserrat" color="white" fontSize="12">
+        <CustomText font="Montserrat" color="black" fontSize="12">
           {data.time}
         </CustomText>
 
         <NonReadMsgs>
-          <CustomText font="Montserrat_Bold" color="white" fontSize="10">
+          <CustomText font="Montserrat_Bold" color="#FFF" fontSize="10">
             {data.notReadMsgs}
           </CustomText>
         </NonReadMsgs>

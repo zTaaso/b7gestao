@@ -8,6 +8,7 @@ import { Container, Content } from './styles';
 
 interface ChatLayoutProps {
   disableKeyboardAvoidingView?: boolean;
+  gradient?: boolean;
   recipient: {
     name: string;
     pic?: string;
@@ -19,12 +20,13 @@ const ChatLayout: React.FC<ChatLayoutProps> = ({
   children,
   disableKeyboardAvoidingView,
   recipient,
+  gradient,
   onDeleteMsg,
 }) => {
   if (disableKeyboardAvoidingView) {
     return (
       <Container
-        colors={['#279DD1', '#23A0B1', '#3AD29F', '#FFF']}
+        colors={['#30D88B', '#23A0B1', '#3AD29F', '#FFF']}
         end={{ y: 0.2, x: 0.0 }}
         locations={[0.1, 0.19, 0.73, 0]}
       >
@@ -36,12 +38,28 @@ const ChatLayout: React.FC<ChatLayoutProps> = ({
     );
   }
 
+  if (gradient) {
+    return (
+      <Container
+        colors={['#30D88B', '#23A0B1', '#3AD29F', '#FFF']}
+        end={{ y: 0.1, x: 1.9 }}
+        locations={[0.1, 0.19, 0.68, 0]}
+      >
+        <ChatHeader recipient={recipient} onDeleteMsg={onDeleteMsg} />
+        <Content>
+          {/* <KeyboardAwareScrollView
+            contentContainerStyle={{ flexGrow: 1 }}
+            showsVerticalScrollIndicator={false}
+          > */}
+          {children}
+          {/* </KeyboardAwareScrollView> */}
+        </Content>
+      </Container>
+    );
+  }
+
   return (
-    <Container
-      colors={['#279DD1', '#23A0B1', '#3AD29F', '#FFF']}
-      end={{ y: 0.1, x: 1.9 }}
-      locations={[0.1, 0.19, 0.68, 0]}
-    >
+    <Content>
       <ChatHeader recipient={recipient} onDeleteMsg={onDeleteMsg} />
       <Content>
         {/* <KeyboardAwareScrollView
@@ -51,7 +69,7 @@ const ChatLayout: React.FC<ChatLayoutProps> = ({
         {children}
         {/* </KeyboardAwareScrollView> */}
       </Content>
-    </Container>
+    </Content>
   );
 };
 

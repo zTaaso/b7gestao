@@ -34,7 +34,7 @@ const Login: React.FC = ({}) => {
         <CustomInput placeholder="Senha" secureTextEntry />
 
         <ForgotPasswordTouchable>
-          <CustomText fontSize="13" color="#279DD1" underline>
+          <CustomText fontSize="13" color="#30D88B" underline>
             Não lembra sua senha? Clique aqui.
           </CustomText>
         </ForgotPasswordTouchable>
@@ -42,7 +42,7 @@ const Login: React.FC = ({}) => {
 
       <ButtonContainer style={{ marginTop: 20 }}>
         <CustomButton
-          bgColor="#279DD1"
+          bgColor="#30D88B"
           textColor="white"
           onPress={() => navigation.navigate('Dashboard')}
         >

@@ -11,8 +11,9 @@ export const Container = styled.View`
   margin: 0 25px;
 
   margin-top: 20px;
-  background-color: #279dd1;
+  background-color: #1a1f24;
   border-radius: 10px;
+  background-color: white;
 `;
 
 export const IconContainer = styled.TouchableOpacity`
@@ -30,6 +31,7 @@ export const Row = styled.View`
 
   align-items: center;
   /* justify-content: center; */
+  /* background-color: white; */
 `;
 
 export const TextContainer = styled.View`

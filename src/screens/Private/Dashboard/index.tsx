@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
       <Modalize
         ref={bottomSheetRef}
         modalStyle={{
-          backgroundColor: '#279dd1',
+          backgroundColor: '#1a1f24',
         }}
         snapPoint={480}
       >
@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
       <Modalize
         ref={workflowModalRef}
         modalStyle={{
-          backgroundColor: '#279dd1',
+          backgroundColor: '#1a1f24',
         }}
         snapPoint={400}
       >

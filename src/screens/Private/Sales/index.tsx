@@ -9,27 +9,27 @@ const optionsItems = [
   {
     label: 'Vendas/Contratos',
     navigateTo: 'SalesReports',
-    Icon: () => <MaterialIcons name="monetization-on" size={24} color="#279DD1" />,
+    Icon: () => <MaterialIcons name="monetization-on" size={24} color="#30D88B" />,
   },
   {
     label: 'Ordem de Serviços',
     navigateTo: 'SalesReports',
-    Icon: () => <AntDesign name="customerservice" size={24} color="#279DD1" />,
+    Icon: () => <AntDesign name="customerservice" size={24} color="#30D88B" />,
   },
   {
     label: 'Ponto de Venda (PDV)',
     navigateTo: 'SalesReports',
-    Icon: () => <AntDesign name="shoppingcart" size={24} color="#279DD1" />,
+    Icon: () => <AntDesign name="shoppingcart" size={24} color="#30D88B" />,
   },
   {
     label: 'Opções Auxiliares',
     navigateTo: 'SalesReports',
-    Icon: () => <Entypo name="tools" size={24} color="#279DD1" />,
+    Icon: () => <Entypo name="tools" size={24} color="#30D88B" />,
   },
   {
     label: 'Relatórios',
     navigateTo: 'SalesReports',
-    Icon: () => <Ionicons name="newspaper-outline" size={24} color="#279DD1" />,
+    Icon: () => <Ionicons name="newspaper-outline" size={24} color="#30D88B" />,
   },
 ];
 
