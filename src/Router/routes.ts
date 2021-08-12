@@ -13,7 +13,11 @@ import Chats from '~/src/screens/Private/Messages/screens/Chats';
 import ChatMain from '~/src/screens/Private/Messages/screens/Chat';
 
 import Sales from '~/src/screens/Private/Sales';
-import SalesReports from '../screens/Private/Sales/screens/Reports';
+import SalesReports from '~/src/screens/Private/Sales/screens/Reports';
+import SalesContracts from '~/src/screens/Private/Sales/screens/Contracts/index';
+import SalesAdditionalOptions from '~/src/screens/Private/Sales/screens/AdditionalOptions/index';
+import SalesPoint from '~/src/screens/Private/Sales/screens/SalesPoint/index';
+import SalesServiceOrder from '~/src/screens/Private/Sales/screens/ServicesOrder/index';
 
 import Payments from '~/src/screens/Private/Payments';
 import PaymentsSchedule from '~/src/screens/Private/Payments/screens/PaymentsSchedule';
@@ -50,6 +54,10 @@ const routes = [
 
   { name: 'Sales', component: Sales },
   { name: 'SalesReports', component: SalesReports },
+  { name: 'SalesContracts', component: SalesContracts },
+  { name: 'SalesAdditionalOptions', component: SalesAdditionalOptions },
+  { name: 'SalesPoint', component: SalesPoint },
+  { name: 'SalesServiceOrder', component: SalesServiceOrder },
 
   { name: 'MessagesChats', component: Chats },
   { name: 'MessagesChatMain', component: ChatMain },

@@ -8,22 +8,22 @@ import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 const optionsItems = [
   {
     label: 'Vendas/Contratos',
-    navigateTo: 'SalesReports',
+    navigateTo: 'SalesContracts',
     Icon: () => <MaterialIcons name="monetization-on" size={24} color="#30D88B" />,
   },
   {
     label: 'Ordem de Serviços',
-    navigateTo: 'SalesReports',
+    navigateTo: 'SalesServiceOrder',
     Icon: () => <AntDesign name="customerservice" size={24} color="#30D88B" />,
   },
   {
     label: 'Ponto de Venda (PDV)',
-    navigateTo: 'SalesReports',
+    navigateTo: 'SalesPoint',
     Icon: () => <AntDesign name="shoppingcart" size={24} color="#30D88B" />,
   },
   {
     label: 'Opções Auxiliares',
-    navigateTo: 'SalesReports',
+    navigateTo: 'SalesAdditionalOptions',
     Icon: () => <Entypo name="tools" size={24} color="#30D88B" />,
   },
   {
