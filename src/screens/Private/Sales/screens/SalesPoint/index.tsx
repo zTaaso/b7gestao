@@ -2,12 +2,7 @@ import React, { useEffect } from 'react';
 import Toast from 'react-native-toast-message';
 import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 
-const SalesPoint: React.FC = () => {
-  useEffect(() => {
-    Toast.show({ text1: 'Tela em desenvolvimento!', type: 'info', position: 'bottom' });
-  }, []);
+import Router from './Router';
 
-  return <PrivateLayout screenName="Ponto de Vendas"></PrivateLayout>;
-};
-
+const SalesPoint: React.FC = () => <Router />;
 export default SalesPoint;
