@@ -1,14 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import {
-  Container,
-  ImageContainer,
-  DarkLayer,
-  LogoContent,
-  TermsContainer,
-  TermsText,
-} from './styles';
+import { Container, LogoContent, TermsContainer, TermsText } from './styles';
 
 import LogoMain from '~/src/screens/Home/components/LogoMain';
 
@@ -20,7 +13,6 @@ const Home: React.FC = () => {
   const navigation = useNavigation();
 
   return (
-    // <ImageContainer source={require('../../assets/images/home_bg_img.png')} resizeMode="cover">
     <Container>
       <LogoContent>
         <LogoMain />

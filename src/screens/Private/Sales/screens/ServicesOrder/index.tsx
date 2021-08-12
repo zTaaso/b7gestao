@@ -8,7 +8,7 @@ const SalesServiceOrder: React.FC = () => {
     Toast.show({ text1: 'Tela em desenvolvimento!', type: 'info', position: 'bottom' });
   }, []);
 
-  return <PrivateLayout screenName="Ordem de Serviço"></PrivateLayout>;
+  return <PrivateLayout screenName="Ordem de Serviço" />;
 };
 
 export default SalesServiceOrder;

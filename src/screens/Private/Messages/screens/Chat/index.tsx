@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { FlatList } from 'react-native-gesture-handler';
+import { FlatListProps } from 'react-native';
 
 import ChatProvider from './context/ChatContext';
 
@@ -14,8 +16,6 @@ import TimelineItemProps from '~/src/types/TimelineItem';
 import createMessage from '~/src/util/createMessage';
 
 import { ChatContainer } from './styles';
-import { FlatList } from 'react-native-gesture-handler';
-import { FlatListProps } from 'react-native';
 
 const mockMessages = [createMessage('Olá, como vai?', false)];
 
@@ -71,7 +71,7 @@ const ChatMain: React.FC = () => {
   );
 };
 
-const ChatMainWithProvider = () => {
+const ChatMainWithProvider: React.FC = () => {
   const ChatMainComponent = React.memo(ChatMain);
 
   return (

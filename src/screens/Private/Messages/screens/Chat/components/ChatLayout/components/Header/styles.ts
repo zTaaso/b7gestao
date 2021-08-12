@@ -39,8 +39,6 @@ export const IconsContainer = styled.View`
   align-items: flex-end;
   justify-content: flex-end;
   padding: 5px;
-
-  /* border: 1px solid red; */
 `;
 
 export const Icon = styled.TouchableOpacity`
@@ -62,5 +60,5 @@ export const ProfilePic = styled.Image`
   border-radius: 25px;
   border-width: 1px;
   /* border-color: rgba(0, 0, 0, 0.3); */
-  border-color: #fff;
+  border-color: #30d88b;
 `;
