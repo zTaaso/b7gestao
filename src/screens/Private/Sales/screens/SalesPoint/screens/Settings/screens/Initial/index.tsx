@@ -41,11 +41,11 @@ const SalesPointSettingsInitial: React.FC = () => {
   }, []);
 
   if (!isMounted) {
-    return <PrivateLayout screenName="Ajustes" />;
+    return <PrivateLayout screenName="Ajustes" showBackButton={false} />;
   }
 
   return (
-    <PrivateLayout screenName="Ajustes">
+    <PrivateLayout screenName="Ajustes" showBackButton={false}>
       <FlatList
         data={optionsItems}
         keyExtractor={(item) => item.navigateTo}
