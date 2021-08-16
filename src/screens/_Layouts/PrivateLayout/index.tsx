@@ -10,6 +10,7 @@ interface PrivateLayoutProps {
   disableKeyboardAvoidingView?: boolean;
   gradient?: boolean;
   screenName?: string;
+  showBackButton?: boolean;
 }
 
 const PrivateLayout: React.FC<PrivateLayoutProps> = ({
@@ -17,6 +18,7 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({
   disableKeyboardAvoidingView,
   screenName,
   gradient,
+  showBackButton,
 }) => {
   if (disableKeyboardAvoidingView) {
     return (
@@ -41,7 +43,7 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({
         locations={[0.1, 0.19, 0.68, 0]}
       >
         <Content>
-          <PrivateHeader screenName={screenName} />
+          <PrivateHeader screenName={screenName} showBackButton={showBackButton} />
           <KeyboardAwareScrollView
             contentContainerStyle={{
               flexGrow: 1,
@@ -59,7 +61,7 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({
 
   return (
     <Content>
-      <PrivateHeader screenName={screenName} />
+      <PrivateHeader screenName={screenName} showBackButton={showBackButton} />
       <KeyboardAwareScrollView
         contentContainerStyle={{
           flexGrow: 1,

@@ -7,17 +7,20 @@ import CustomText from '~/src/components/CustomText';
 
 interface PrivateHeaderProps {
   screenName?: string;
+  showBackButton?: boolean;
 }
 
-const PrivateHeader: React.FC<PrivateHeaderProps> = ({ screenName }) => {
+const PrivateHeader: React.FC<PrivateHeaderProps> = ({ screenName, showBackButton = true }) => {
   const navigation = useNavigation();
 
   return (
     <Container>
-      <IconContainer onPress={() => navigation.goBack()}>
-        <MaterialIcons name="keyboard-arrow-left" size={50} color="#FFF" />
-      </IconContainer>
-      <TextContainer>
+      {showBackButton && (
+        <IconContainer onPress={() => navigation.goBack()}>
+          <MaterialIcons name="keyboard-arrow-left" size={50} color="#FFF" />
+        </IconContainer>
+      )}
+      <TextContainer hasPaddingRight={showBackButton}>
         <CustomText color="#FFF" font="Montserrat_Bold">
           {screenName}
         </CustomText>
