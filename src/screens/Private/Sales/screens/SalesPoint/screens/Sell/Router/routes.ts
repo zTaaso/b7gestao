@@ -1,4 +1,4 @@
-import SalesPointSellAllProducts from '../screens/AllProducts';
+import SalesPointSellProductsListing from '../screens/ProductsListing';
 import SalesPointSellInitial from '../screens/Initial';
 
 const routes = [
@@ -7,8 +7,8 @@ const routes = [
     component: SalesPointSellInitial,
   },
   {
-    name: 'SalesPointSellAllProducts',
-    component: SalesPointSellAllProducts,
+    name: 'SalesPointSellProductsListing',
+    component: SalesPointSellProductsListing,
   },
 ];
 

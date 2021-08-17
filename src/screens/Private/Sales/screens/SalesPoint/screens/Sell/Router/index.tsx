@@ -5,7 +5,7 @@ import routes from './routes';
 
 const Stack = createStackNavigator();
 
-const Router = () => (
+const Router: React.FC = () => (
   <Stack.Navigator
     initialRouteName="SalesPointSellInitial"
     screenOptions={{
