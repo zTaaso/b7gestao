@@ -21,7 +21,7 @@ LogBox.ignoreLogs([
   'VirtualizedLists should never be nested inside plain ScrollViews with the same orientation',
 ]);
 
-export default function App() {
+const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     Montserrat_Light: Montserrat_300Light,
     Montserrat_Bold: Montserrat_700Bold,
@@ -41,4 +41,6 @@ export default function App() {
       <Toast ref={(ref) => Toast.setRef(ref)} />
     </DashboardProvider>
   );
-}
+};
+
+export default App;

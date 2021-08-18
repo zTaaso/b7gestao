@@ -24,9 +24,21 @@ module.exports = {
   settings: {
     'import/resolver': {
       'babel-plugin-root-import': {
-        rootPathPrefix: '~',
-        rootPathSuffix: '.',
-        extensions: ['.tsx', 'ts', '.android.js', '.ios.js', '.android.ts', '.ios.ts'],
+        rootPathPrefix: '~/',
+        rootPathSuffix: './',
+        extensions: [
+          '.tsx',
+          '.ts',
+          '.js',
+          '.jsx',
+          '.android.js',
+          '.ios.js',
+          '.android.ts',
+          '.ios.ts',
+        ],
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
