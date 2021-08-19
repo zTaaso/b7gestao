@@ -9,7 +9,7 @@ export const Container = styled.View`
   /* padding: 20px; */
 
   border-top-color: rgba(255, 255, 255, 0.2);
-  /* border-top-width: 1px; */
+  border-top-width: 1px;
   /* border-top-right-radius: 20px; */
   /* border-top-left-radius: 20px; */
 `;
@@ -58,6 +58,7 @@ export const CartInfo = styled.View`
 export const ChargeButtonContainer = styled.View``;
 
 export const ChargeButton = styled(RectButton)`
+  /*  */
   flex: 1;
 
   align-items: center;

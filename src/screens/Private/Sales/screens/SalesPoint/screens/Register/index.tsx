@@ -1,9 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native-svg';
-import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
+import Router from './Router';
 
-const SalesPointRegister: React.FC = () => (
-  <PrivateLayout screenName="Cadastro" showBackButton={false} />
-);
+const SalesPointRegister: React.FC = () => <Router />;
 
 export default SalesPointRegister;

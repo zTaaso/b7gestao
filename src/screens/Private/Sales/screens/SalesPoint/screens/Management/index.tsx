@@ -1,8 +1,6 @@
 import React from 'react';
-import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
+import Router from './Router';
 
-const SalesPointManagement: React.FC = () => (
-  <PrivateLayout screenName="Gestão" showBackButton={false} />
-);
+const SalesPointManagement: React.FC = () => <Router />;
 
 export default SalesPointManagement;
