@@ -1,7 +1,7 @@
 import React from 'react';
-import CustomText from '~/src/components/CustomText';
-
 import { Feather, FontAwesome5 } from '@expo/vector-icons';
+
+import CustomText from '~/src/components/CustomText';
 
 import {
   Container,
