@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MaterialIcons, Octicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons';
+import { MaterialIcons, MaterialCommunityIcons, FontAwesome5, Feather } from '@expo/vector-icons';
 import { FlatList } from 'react-native-gesture-handler';
 
 import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
@@ -8,34 +8,34 @@ import OptionItem from '~/src/screens/Private/components/Option';
 const optionsItems = [
   {
     label: 'Controle de Caixa',
-    navigateTo: 'SalesPointSettingsMarketInfo',
+    navigateTo: 'SalesPointManagementCashControl',
     Icon: () => <FontAwesome5 name="money-bill" size={24} color="#30D88B" />,
   },
   {
     label: 'Pedidos em Aberto',
-    navigateTo: 'SalesPointSettingsPreferences',
+    navigateTo: 'SalesPointManagementOpenOrders',
     Icon: () => (
       <MaterialCommunityIcons name="order-bool-ascending-variant" size={24} color="#30D88B" />
     ),
   },
   {
     label: 'Conta de Clientes',
-    navigateTo: 'SalesPointSettingsHelp',
-    Icon: () => <MaterialIcons name="help-outline" size={24} color="#30D88B" />,
+    navigateTo: 'SalesPointManagementClients',
+    Icon: () => <MaterialIcons name="people" size={24} color="#30D88B" />,
   },
   {
     label: 'Consultar Estoque',
-    navigateTo: 'SalesPointSettingsContact',
-    Icon: () => <MaterialCommunityIcons name="message-text-outline" size={24} color="#30D88B" />,
+    navigateTo: 'SalesPointManagementStock',
+    Icon: () => <Feather name="box" size={24} color="#30D88B" />,
   },
   {
     label: 'Consultar Vendas',
-    navigateTo: 'Dashboard',
-    Icon: () => <MaterialIcons name="cancel" size={24} color="#c54040" />,
+    navigateTo: 'SalesPointManagementSales',
+    Icon: () => <FontAwesome5 name="tags" size={24} color="#30D88B" />,
   },
 ];
 
-const SalesPointSettingsInitial: React.FC = () => {
+const SalesPointManagementInitial: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -59,4 +59,4 @@ const SalesPointSettingsInitial: React.FC = () => {
   );
 };
 
-export default SalesPointSettingsInitial;
+export default SalesPointManagementInitial;

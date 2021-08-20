@@ -1,29 +1,34 @@
-import SalesPointSettingsContact from '../screens/Contact';
-import SalesPointSettingsHelp from '../screens/Help';
-import SalesPointSettingsInitial from '../screens/Initial';
-import SalesPointSettingsMarketInfo from '../screens/MarketInfo';
-import SalesPointSettingsPreferences from '../screens/Preferences';
+import SalesPointManagementCashControl from '../screens/CashControl';
+import SalesPointManagementOpenOrders from '../screens/OpenOrders';
+import SalesPointManagementInitial from '../screens/Initial';
+import SalesPointManagementClients from '../screens/Clients';
+import SalesPointManagementStock from '../screens/Stock';
+import SalesPointManagementSales from '../screens/Sales/index';
 
 const routes = [
   {
-    name: 'SalesPointSettingsInitial',
-    component: SalesPointSettingsInitial,
+    name: 'SalesPointManagementInitial',
+    component: SalesPointManagementInitial,
   },
   {
-    name: 'SalesPointSettingsMarketInfo',
-    component: SalesPointSettingsMarketInfo,
+    name: 'SalesPointManagementClients',
+    component: SalesPointManagementClients,
   },
   {
-    name: 'SalesPointSettingsContact',
-    component: SalesPointSettingsContact,
+    name: 'SalesPointManagementCashControl',
+    component: SalesPointManagementCashControl,
   },
   {
-    name: 'SalesPointSettingsPreferences',
-    component: SalesPointSettingsPreferences,
+    name: 'SalesPointManagementStock',
+    component: SalesPointManagementStock,
   },
   {
-    name: 'SalesPointSettingsHelp',
-    component: SalesPointSettingsHelp,
+    name: 'SalesPointManagementOpenOrders',
+    component: SalesPointManagementOpenOrders,
+  },
+  {
+    name: 'SalesPointManagementSales',
+    component: SalesPointManagementSales,
   },
 ];
 
