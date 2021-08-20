@@ -38,7 +38,7 @@ export const CartContainer = styled.View`
   padding: 15px 0;
 `;
 
-export const CartInfo = styled.View`
+export const CartInfo = styled.TouchableOpacity`
   flex-direction: row;
   flex: 0.9;
 `;
@@ -56,7 +56,7 @@ export const ChargeButton = styled(RectButton)`
   border-radius: 10px;
 `;
 
-export const CartIconContainer = styled.TouchableOpacity`
+export const CartIconContainer = styled.View`
   padding: 0 8px;
 
   align-items: center;

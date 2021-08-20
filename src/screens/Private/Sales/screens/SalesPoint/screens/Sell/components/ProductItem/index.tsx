@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomText from '~/src/components/CustomText';
+import { useSellContext } from '../../context/SellContext';
 
 import Product from '../../types/Product';
 
@@ -11,10 +12,11 @@ interface ProductItemProps {
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ children, product }) => {
+  const { addProductItem } = useSellContext();
+
   const handlePress = React.useCallback(() => {
-    // a fazer: adicionar produto em um contexto global de vendas
-    console.log(`clicou no ${product.name}!`);
-  }, []);
+    addProductItem(product);
+  }, [addProductItem, product]);
 
   return (
     <Container onPress={handlePress}>
@@ -30,7 +32,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ children, product }) => {
           {`${product.name}`}
         </CustomText>
         <CustomText font="Montserrat_Bold" fontSize="14" numberOfLines={1}>
-          {`${product.price}`}
+          {`${product.formattedPrice}`}
         </CustomText>
       </TextContainer>
     </Container>

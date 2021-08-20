@@ -15,55 +15,60 @@ import {
   CartIconContainer,
   CartTextInfo,
 } from './styles';
+import { useSellContext } from '../../context/SellContext';
 
-const SalesPointCartContainer: React.FC = () => (
-  <Container>
-    <EntityContainer>
-      <EntityBlock>
-        <EntityIconContainer>
-          <FontAwesome5 name="user-tag" size={24} color="#30d88b" />
-        </EntityIconContainer>
-        <CustomText font="Montserrat_Bold" fontSize="16">
-          Vendedor
-        </CustomText>
-      </EntityBlock>
-      <EntityBlock hasBorderLeft>
-        <EntityIconContainer>
-          <FontAwesome5 name="user-alt" size={24} color="#30d88b" />
-        </EntityIconContainer>
-        <CustomText font="Montserrat_Bold" fontSize="16">
-          Comprador
-        </CustomText>
-      </EntityBlock>
-    </EntityContainer>
-    <CartContainer>
-      <CartInfo>
-        <CartIconContainer>
-          <Feather name="shopping-cart" size={28} color="#30D88B" />
-        </CartIconContainer>
-        <CartTextInfo>
-          <CustomText
-            fontSize="16"
-            font="Montserrat_Bold"
-            numberOfLines={1}
-            style={{ maxWidth: 130 }}
-          >
-            280 Produtos
+const SalesPointCartContainer: React.FC = () => {
+  const { cartInfo } = useSellContext();
+
+  return (
+    <Container>
+      <EntityContainer>
+        <EntityBlock>
+          <EntityIconContainer>
+            <FontAwesome5 name="user-tag" size={24} color="#30d88b" />
+          </EntityIconContainer>
+          <CustomText font="Montserrat_Bold" fontSize="16">
+            Vendedor
           </CustomText>
-          <CustomText fontSize="14" numberOfLines={1} style={{ maxWidth: 130 }}>
-            R$ 20.000,00
+        </EntityBlock>
+        <EntityBlock hasBorderLeft>
+          <EntityIconContainer>
+            <FontAwesome5 name="user-alt" size={24} color="#30d88b" />
+          </EntityIconContainer>
+          <CustomText font="Montserrat_Bold" fontSize="16">
+            Comprador
           </CustomText>
-        </CartTextInfo>
-      </CartInfo>
-      <ChargeButtonContainer>
-        <ChargeButton>
-          <CustomText color="#000" font="Montserrat_Bold">
-            Cobrar
-          </CustomText>
-        </ChargeButton>
-      </ChargeButtonContainer>
-    </CartContainer>
-  </Container>
-);
+        </EntityBlock>
+      </EntityContainer>
+      <CartContainer>
+        <CartInfo>
+          <CartIconContainer>
+            <Feather name="shopping-cart" size={28} color="#30D88B" />
+          </CartIconContainer>
+          <CartTextInfo>
+            <CustomText
+              fontSize="16"
+              font="Montserrat_Bold"
+              numberOfLines={1}
+              style={{ maxWidth: 130 }}
+            >
+              {cartInfo.productsAmount} Produtos
+            </CustomText>
+            <CustomText fontSize="14" numberOfLines={1} style={{ maxWidth: 130 }}>
+              {cartInfo.formattedTotalPrice}
+            </CustomText>
+          </CartTextInfo>
+        </CartInfo>
+        <ChargeButtonContainer>
+          <ChargeButton>
+            <CustomText color="#000" font="Montserrat_Bold">
+              Cobrar
+            </CustomText>
+          </ChargeButton>
+        </ChargeButtonContainer>
+      </CartContainer>
+    </Container>
+  );
+};
 
 export default SalesPointCartContainer;
