@@ -13,7 +13,7 @@ const Router: React.FC = () => (
       headerShown: false,
 
       tabBarStyle: {
-        borderTopColor: 'rgba(0, 0, 0, 0.7)',
+        borderTopColor: 'rgba(255, 255, 255, 0.2)',
         borderTopWidth: 1,
         height: 55,
       },
@@ -22,6 +22,7 @@ const Router: React.FC = () => (
       tabBarInactiveBackgroundColor: '#1a1f24',
       tabBarActiveBackgroundColor: '#1a1f24',
       tabBarActiveTintColor: '#30D88B',
+      tabBarInactiveTintColor: 'gray',
     }}
   >
     {routes.map(({ name, component, title, icon }) => (

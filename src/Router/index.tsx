@@ -7,7 +7,7 @@ import routes from './routes';
 const Stack = createStackNavigator();
 
 const Router = () => (
-  <NavigationContainer>
+  <NavigationContainer theme={{ colors: { background: '#000' } }}>
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{

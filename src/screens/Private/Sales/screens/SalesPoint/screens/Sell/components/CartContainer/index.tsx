@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Feather, FontAwesome5 } from '@expo/vector-icons';
 
+import { useSellContext } from '../../context/SellContext';
+
 import CustomText from '~/src/components/CustomText';
+import CartDetails from './components/CartDetails';
 
 import {
   Container,
@@ -15,10 +18,11 @@ import {
   CartIconContainer,
   CartTextInfo,
 } from './styles';
-import { useSellContext } from '../../context/SellContext';
 
 const SalesPointCartContainer: React.FC = () => {
   const { cartInfo } = useSellContext();
+
+  const [isDetailsToggled, setIsDetailsToggled] = useState(false);
 
   return (
     <Container>
@@ -40,8 +44,9 @@ const SalesPointCartContainer: React.FC = () => {
           </CustomText>
         </EntityBlock>
       </EntityContainer>
+      <CartDetails isVisible={isDetailsToggled} />
       <CartContainer>
-        <CartInfo>
+        <CartInfo onPress={() => setIsDetailsToggled(!isDetailsToggled)}>
           <CartIconContainer>
             <Feather name="shopping-cart" size={28} color="#30D88B" />
           </CartIconContainer>
