@@ -11,7 +11,7 @@ import CustomButton from '~/src/components/CustomButton/index';
 import Footer from '~/src/components/FooterContainer/index';
 import TextContainer from '../components/TextContainer';
 
-const RegisterCompany: React.FC = ({}) => {
+const RegisterCompany: React.FC = () => {
   const navigation = useNavigation();
 
   return (
@@ -19,7 +19,7 @@ const RegisterCompany: React.FC = ({}) => {
       <TextContainer>
         <CustomText>
           Agora preencha os dados da sua empresa para poder utilizar o{' '}
-          <CustomText font="Montserrat_Bold">DeConta.</CustomText>
+          <CustomText font="Montserrat_Bold">B7 Gestão.</CustomText>
         </CustomText>
 
         <CustomText fontSize={16}>

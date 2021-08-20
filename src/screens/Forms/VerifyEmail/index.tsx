@@ -36,7 +36,7 @@ const VerifyEmail: React.FC = ({}) => {
     navigation.navigate('SuccessScreen', {
       title: 'Conta verificada com sucesso!',
       description:
-        'Tudo certo por aqui, confirmamos seu e-mail e você já pode começar a usar o DeConta.',
+        'Tudo certo por aqui, confirmamos seu e-mail e você já pode começar a usar o B7 Gestão.',
       buttonText: 'Começar',
       redirectRoute: 'Dashboard',
     });

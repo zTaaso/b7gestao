@@ -18,13 +18,13 @@ const RegisterUser: React.FC = ({}) => {
     <FormLayout>
       <TextContainer>
         <CustomText>
-          Olá, seja bem-vindo ao <CustomText font="Montserrat_Bold">DeConta</CustomText>. Organize o
-          financeiro da sua empresa com nosso App.
+          Olá, seja bem-vindo ao <CustomText font="Montserrat_Bold">B7Gestão</CustomText>. Organize
+          o financeiro da sua empresa com nosso App.
         </CustomText>
 
         <CustomText fontSize={16}>
-          {'\n\n'}Para acessar os recursos basta criar um cadastro DeConta, preenchendo os campos
-          abaixo.
+          {'\n\n'}Para acessar os recursos basta criar um cadastro no B7Gestão, preenchendo os
+          campos abaixo.
         </CustomText>
       </TextContainer>
 
