@@ -4,9 +4,6 @@ import { css } from 'styled-components';
 
 export const Container = styled.View`
   background-color: #000;
-
-  border-top-color: rgba(255, 255, 255, 0.2);
-  border-top-width: 1px;
 `;
 
 export const EntityContainer = styled.View`
