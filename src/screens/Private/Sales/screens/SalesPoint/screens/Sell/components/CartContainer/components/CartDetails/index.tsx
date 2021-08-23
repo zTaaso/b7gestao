@@ -13,7 +13,7 @@ const CartDetails: React.FC<CartDetailsProps> = ({ isVisible }) => {
 
   const increaseHeight = () => {
     Animated.timing(heightAnim, {
-      toValue: 500,
+      toValue: 515,
       duration: 500,
       useNativeDriver: false,
     }).start();
