@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Feather, FontAwesome5 } from '@expo/vector-icons';
 
 import { useSellContext } from '../../context/SellContext';
@@ -22,7 +22,19 @@ import {
 const SalesPointCartContainer: React.FC = () => {
   const { cartInfo } = useSellContext();
 
+  const [isMounted, setIsMounted] = useState(false);
+
   const [isDetailsToggled, setIsDetailsToggled] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <Container>
