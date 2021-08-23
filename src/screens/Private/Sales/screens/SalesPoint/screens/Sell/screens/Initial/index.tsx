@@ -5,6 +5,8 @@ import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 
 import ProductCategory from '../../components/ProductCategory';
 import CategoryList from '../../components/ItemsList';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const categoryItemsInfo = [
   {
@@ -21,20 +23,34 @@ const categoryItemsInfo = [
   },
 ];
 
-const SalesPointSellInitial: React.FC = () => (
-  <PrivateLayout screenName="Vender" showBackButton={false}>
-    <CategoryList>
-      {categoryItemsInfo.map((category) => (
-        <ProductCategory key={category.props.category} {...category.props}>
-          {category.Icon}
-        </ProductCategory>
-      ))}
+const SalesPointSellInitial: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
 
-      <ProductCategory title="Adicionar Categoria" onPress={() => {}}>
-        <Ionicons name="ios-add" size={40} color="#30D88B" />
-      </ProductCategory>
-    </CategoryList>
-  </PrivateLayout>
-);
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, []);
+
+  if (!isMounted) {
+    return <PrivateLayout screenName="Vender" showBackButton={false} />;
+  }
+
+  return (
+    <PrivateLayout screenName="Vender" showBackButton={false}>
+      <CategoryList>
+        {categoryItemsInfo.map((category) => (
+          <ProductCategory key={category.props.category} {...category.props}>
+            {category.Icon}
+          </ProductCategory>
+        ))}
+
+        <ProductCategory title="Adicionar Categoria" onPress={() => {}}>
+          <Ionicons name="ios-add" size={40} color="#30D88B" />
+        </ProductCategory>
+      </CategoryList>
+    </PrivateLayout>
+  );
+};
 
 export default SalesPointSellInitial;
