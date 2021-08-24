@@ -1,4 +1,4 @@
-import { ParamListBase, RouteProp, useRoute } from '@react-navigation/native';
+import { ParamListBase, RouteProp, useFocusEffect, useRoute } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 
 import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
@@ -6,6 +6,9 @@ import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 import ProductsList from '../../components/ItemsList';
 import ProductItem from '../../components/ProductItem';
 import Product from '../../types/Product';
+
+import { useSellContext } from '../../context/SellContext';
+import { InteractionManager } from 'react-native';
 
 interface RouteParams extends ParamListBase {
   ProductsListing: {
@@ -21,7 +24,15 @@ const SalesPointSellProductsListing: React.FC = () => {
   const products: Product[] = [
     { id: 1, name: 'Arroz', price: 10, formattedPrice: 'R$10,00', image_url: '', amount: 1 },
     { id: 2, name: 'Feijão', price: 15, formattedPrice: 'R$15,00', image_url: '', amount: 1 },
-    { id: 3, name: 'Macarrão', price: 12, formattedPrice: 'R$12,00', image_url: '', amount: 1 },
+    {
+      id: 3,
+      name: 'Macarrão',
+      price: 12,
+      formattedPrice: 'R$12,00',
+      image_url: '',
+      amount: 1,
+      description: 'Macarrão super gosto hmmmm',
+    },
     { id: 4, name: 'Hambúrguer', price: 12, formattedPrice: 'R$15,00', image_url: '', amount: 1 },
   ];
 
@@ -29,11 +40,20 @@ const SalesPointSellProductsListing: React.FC = () => {
   const { screenName, category } = route.params;
   // i will user 'category' to fetch specific data from products
 
+  const { showCartState } = useSellContext();
+
   useEffect(() => {
     if (!isMounted) {
       setIsMounted(true);
     }
   }, []);
+
+  useFocusEffect(() => {
+    InteractionManager.runAfterInteractions(() => {
+      const [, setShowCart] = showCartState;
+      setShowCart(true);
+    });
+  });
 
   if (!isMounted) {
     return <PrivateLayout screenName={screenName} />;

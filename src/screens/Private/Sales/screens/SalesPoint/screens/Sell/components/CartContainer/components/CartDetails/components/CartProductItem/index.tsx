@@ -16,7 +16,7 @@ interface CartProductItemProps {
 }
 
 const CartProductItem: React.FC<CartProductItemProps> = ({ product }) => {
-  const { removeProductItem } = useSellContext();
+  const { removeProductItem, showCartState } = useSellContext();
 
   const navigation = useNavigation();
 
@@ -25,7 +25,10 @@ const CartProductItem: React.FC<CartProductItemProps> = ({ product }) => {
   const handlePress = React.useCallback(() => {
     // see product details
     navigation.navigate('SalesPointSellProductDetails', { product });
-  }, []);
+
+    const [, setShouldShowCart] = showCartState;
+    setShouldShowCart(false);
+  }, [product, navigation]);
 
   const handleRemove = React.useCallback(async () => {
     const isUserSure = await asyncAlert(

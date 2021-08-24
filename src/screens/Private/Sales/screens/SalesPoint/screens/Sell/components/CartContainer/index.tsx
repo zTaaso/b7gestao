@@ -21,7 +21,7 @@ import {
 } from './styles';
 
 const SalesPointCartContainer: React.FC = () => {
-  const { cartInfo } = useSellContext();
+  const { cartInfo, showCartState } = useSellContext();
 
   const [isMounted, setIsMounted] = useState(false);
 
@@ -34,6 +34,9 @@ const SalesPointCartContainer: React.FC = () => {
       setIsMounted(true);
     });
   }, []);
+
+  const [shoudShowCart] = showCartState;
+  if (!shoudShowCart) return null;
 
   if (!isMounted) {
     return null;

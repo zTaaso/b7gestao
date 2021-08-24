@@ -7,6 +7,7 @@ interface SellContextTypes {
   removeProductItem: (product: Product) => void;
   cartInfo: CartInfo;
   selectedProducts: Product[];
+  showCartState: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
 }
 
 interface CartInfo {
@@ -26,6 +27,8 @@ const SellProvider: React.FC = ({ children }) => {
     totalPrice: 0,
     formattedTotalPrice: '',
   });
+
+  const showCartState = React.useState(true);
 
   const addProductItem = React.useCallback(
     (receivedProduct: Product) => {
@@ -104,6 +107,7 @@ const SellProvider: React.FC = ({ children }) => {
     removeProductItem,
     cartInfo,
     selectedProducts,
+    showCartState,
   };
 
   return <SellContext.Provider value={state}>{children}</SellContext.Provider>;

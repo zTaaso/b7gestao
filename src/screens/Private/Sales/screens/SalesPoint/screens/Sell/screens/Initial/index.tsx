@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { InteractionManager } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { AntDesign, FontAwesome, Ionicons } from '@expo/vector-icons';
 
 import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 
 import ProductCategory from '../../components/ProductCategory';
 import CategoryList from '../../components/ItemsList';
-import { useState } from 'react';
-import { useEffect } from 'react';
+
+import { useSellContext } from '../../context/SellContext';
 
 const categoryItemsInfo = [
   {
@@ -25,12 +27,19 @@ const categoryItemsInfo = [
 
 const SalesPointSellInitial: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
-
+  const { showCartState } = useSellContext();
   useEffect(() => {
     if (!isMounted) {
       setIsMounted(true);
     }
   }, []);
+
+  useFocusEffect(() => {
+    InteractionManager.runAfterInteractions(() => {
+      const [, setShowCart] = showCartState;
+      setShowCart(true);
+    });
+  });
 
   if (!isMounted) {
     return <PrivateLayout screenName="Vender" showBackButton={false} />;
