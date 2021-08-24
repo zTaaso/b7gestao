@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import PrivateHeader from './components/Header';
@@ -20,6 +20,18 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({
   gradient,
   showBackButton,
 }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, []);
+
+  if (!isMounted) {
+    return <Content />;
+  }
+
   if (disableKeyboardAvoidingView) {
     return (
       <Container
