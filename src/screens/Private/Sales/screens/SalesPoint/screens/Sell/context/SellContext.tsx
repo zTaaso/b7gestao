@@ -4,7 +4,9 @@ import Product from '../types/Product';
 
 interface SellContextTypes {
   addProductItem: (product: Product) => void;
+  removeProductItem: (product: Product) => void;
   cartInfo: CartInfo;
+  selectedProducts: Product[];
 }
 
 interface CartInfo {
@@ -50,10 +52,31 @@ const SellProvider: React.FC = ({ children }) => {
 
       setSelectedProducts(newSelectedProducts);
     },
-    [selectedProducts, setSelectedProducts]
+    [selectedProducts]
+  );
+
+  const removeProductItem = React.useCallback(
+    (receivedProduct: Product) => {
+      // return solely the product which the id is different from the received one
+
+      console.log({ receivedProductName: receivedProduct.name, selectedProducts });
+
+      const newSelectedProducts = selectedProducts.filter((product) => {
+        const condition = product.id !== receivedProduct.id;
+
+        return condition;
+      });
+
+      console.log({ newSelectedProducts });
+
+      setSelectedProducts(newSelectedProducts);
+    },
+    [selectedProducts]
   );
 
   React.useEffect(() => {
+    // console.log({ selectedProducts });
+
     function getAmountInfo() {
       let productsAmount = 0;
       let totalPrice = 0;
@@ -78,7 +101,9 @@ const SellProvider: React.FC = ({ children }) => {
 
   const state = {
     addProductItem,
+    removeProductItem,
     cartInfo,
+    selectedProducts,
   };
 
   return <SellContext.Provider value={state}>{children}</SellContext.Provider>;
