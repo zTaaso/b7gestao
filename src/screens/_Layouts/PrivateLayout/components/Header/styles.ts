@@ -15,6 +15,8 @@ export const Container = styled.View`
   min-height: 60px;
   margin-top: ${Constants.statusBarHeight + 15}px;
   padding-bottom: 5px;
+
+  background-color: #1a1f24;
 `;
 
 export const IconContainer = styled.TouchableOpacity`

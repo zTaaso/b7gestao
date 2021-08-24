@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, InteractionManager, ScrollView } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import PrivateHeader from './components/Header';
 
 import { Container, Content } from './styles';
-import { ScrollView } from 'react-native';
 
 interface PrivateLayoutProps {
   disableKeyboardAvoidingView?: boolean;
@@ -23,13 +23,19 @@ const PrivateLayout: React.FC<PrivateLayoutProps> = ({
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (!isMounted) {
+    InteractionManager.runAfterInteractions(() => {
       setIsMounted(true);
-    }
+    });
   }, []);
 
   if (!isMounted) {
-    return <Content />;
+    return (
+      <>
+        <Content style={{ alignContent: 'center', justifyContent: 'center' }}>
+          <ActivityIndicator size="large" color="#30D88B" />
+        </Content>
+      </>
+    );
   }
 
   if (disableKeyboardAvoidingView) {

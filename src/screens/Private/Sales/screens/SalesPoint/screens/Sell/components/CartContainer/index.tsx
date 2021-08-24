@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { InteractionManager } from 'react-native';
 import { Feather, FontAwesome5 } from '@expo/vector-icons';
 
 import { useSellContext } from '../../context/SellContext';
@@ -26,10 +27,12 @@ const SalesPointCartContainer: React.FC = () => {
 
   const [isDetailsToggled, setIsDetailsToggled] = useState(false);
 
+  console.log('cart container remontado');
+
   useEffect(() => {
-    if (!isMounted) {
+    InteractionManager.runAfterInteractions(() => {
       setIsMounted(true);
-    }
+    });
   }, []);
 
   if (!isMounted) {
@@ -88,4 +91,4 @@ const SalesPointCartContainer: React.FC = () => {
   );
 };
 
-export default SalesPointCartContainer;
+export default React.memo(SalesPointCartContainer);
