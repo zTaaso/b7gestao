@@ -5,8 +5,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import CustomText from '~/src/components/CustomText';
 import CartProductItem from './components/CartProductItem';
 
-import Product from '../../../../types/Product';
-
 import { Container } from './styles';
 import { useSellContext } from '../../../../context/SellContext';
 
@@ -29,7 +27,7 @@ const CartDetails: React.FC<CartDetailsProps> = ({ isVisible }) => {
   const increaseHeight = () => {
     Animated.timing(heightAnim, {
       toValue: flatlistHeight,
-      duration: 400,
+      duration: 250,
       useNativeDriver: false,
     }).start();
   };
@@ -37,7 +35,7 @@ const CartDetails: React.FC<CartDetailsProps> = ({ isVisible }) => {
   const decreaseHeight = () => {
     Animated.timing(heightAnim, {
       toValue: 0,
-      duration: 400,
+      duration: 250,
       useNativeDriver: false,
     }).start();
   };
