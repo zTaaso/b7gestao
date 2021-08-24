@@ -1,5 +1,6 @@
 import SalesPointSellProductsListing from '../screens/ProductsListing';
 import SalesPointSellInitial from '../screens/Initial';
+import SalesPointSellProductDetails from '../screens/ProductDetails';
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
   {
     name: 'SalesPointSellProductsListing',
     component: SalesPointSellProductsListing,
+  },
+  {
+    name: 'SalesPointSellProductDetails',
+    component: SalesPointSellProductDetails,
   },
 ];
 
