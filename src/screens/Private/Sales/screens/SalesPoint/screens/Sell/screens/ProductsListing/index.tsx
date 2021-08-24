@@ -1,5 +1,5 @@
 import { ParamListBase, RouteProp, useRoute } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 
@@ -15,6 +15,8 @@ interface RouteParams extends ParamListBase {
 }
 
 const SalesPointSellProductsListing: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
   // irei recuperar o array de produtos de um contexto com base na categoria recebida
   const products: Product[] = [
     { id: 1, name: 'Arroz', price: 10, formattedPrice: 'R$10,00', image_url: '', amount: 1 },
@@ -25,6 +27,17 @@ const SalesPointSellProductsListing: React.FC = () => {
 
   const route = useRoute() as RouteProp<RouteParams, 'ProductsListing'>;
   const { screenName, category } = route.params;
+  // i will user 'category' to fetch specific data from products
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, []);
+
+  if (!isMounted) {
+    return <PrivateLayout screenName={screenName} />;
+  }
 
   return (
     <PrivateLayout screenName={screenName}>
