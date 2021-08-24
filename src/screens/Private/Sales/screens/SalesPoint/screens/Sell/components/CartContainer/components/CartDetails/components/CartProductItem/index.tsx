@@ -1,10 +1,12 @@
 import React from 'react';
-import CustomText from '~/src/components/CustomText';
+import { useNavigation } from '@react-navigation/core';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import { useSellContext } from '../../../../../../context/SellContext';
 
 import Product from '../../../../../../types/Product';
+import CustomText from '~/src/components/CustomText';
+import asyncAlert from '~/src/util/asyncAlert';
 
 import { Container, LeftContent, RightContent, DeleteIcon } from './styles';
 
@@ -14,31 +16,51 @@ interface CartProductItemProps {
 }
 
 const CartProductItem: React.FC<CartProductItemProps> = ({ product }) => {
-  //   const { addProductItem } = useSellContext();
+  const { removeProductItem } = useSellContext();
+
+  const navigation = useNavigation();
+
+  console.log(`${product.name} renderizou`);
 
   const handlePress = React.useCallback(() => {
     // see product details
-    console.log('navegar para detlahe do produto');
+    navigation.navigate('SalesPointSellProductDetails', { product });
   }, []);
 
-  return (
-    <Container onPress={handlePress}>
-      <LeftContent>
-        <CustomText fontSize="16">{product.amount}x </CustomText>
+  const handleRemove = React.useCallback(async () => {
+    const isUserSure = await asyncAlert(
+      'Remover produto',
+      `Deseja remover o produto ${product.name}?`,
+      [{ text: 'Não' }, { text: 'Sim, remover', returnTrue: true }]
+    );
 
-        <CustomText fontSize="16" font="Montserrat_Bold">
-          {`   ${product.name}`}
-        </CustomText>
-      </LeftContent>
-      <RightContent>
-        <CustomText fontSize="16"> {product.formattedPrice}</CustomText>
+    console.log({ isUserSure });
+    if (!isUserSure) return;
 
-        <DeleteIcon>
-          <MaterialIcons name="delete" size={28} color="#ff3c00" />
-        </DeleteIcon>
-      </RightContent>
-    </Container>
+    removeProductItem(product);
+  }, [removeProductItem]);
+
+  return React.useMemo(
+    () => (
+      <Container onPress={handlePress}>
+        <LeftContent>
+          <CustomText fontSize="16">{product.amount}x </CustomText>
+
+          <CustomText fontSize="16" font="Montserrat_Bold">
+            {`   ${product.name}`}
+          </CustomText>
+        </LeftContent>
+        <RightContent>
+          <CustomText fontSize="16"> {product.formattedPrice}</CustomText>
+
+          <DeleteIcon onPress={handleRemove}>
+            <MaterialIcons name="delete" size={28} color="#E63874" />
+          </DeleteIcon>
+        </RightContent>
+      </Container>
+    ),
+    [product, handleRemove]
   );
 };
 
-export default CartProductItem;
+export default React.memo(CartProductItem);
