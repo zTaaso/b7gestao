@@ -15,8 +15,8 @@ import PrivateLayout from '~/src/screens/_Layouts/PrivateLayout';
 
 const optionsItems = [
   { label: 'Agendamentos', navigateTo: 'PaymentsSchedule', Icon: CalendarIcon },
-  { label: 'Pagamentos Realizados', navigateTo: 'PaymentsDone', Icon: ArrowUpIcon },
-  { label: 'Pagamentos Recebidos', navigateTo: 'PaymentsReceived', Icon: ArrowUpRegularIcon },
+  { label: 'Pagamentos', navigateTo: 'PaymentsDone', Icon: ArrowUpIcon },
+  { label: 'Recebimentos', navigateTo: 'PaymentsReceived', Icon: ArrowUpRegularIcon },
   { label: 'Registrar Pagamento', navigateTo: 'PaymentsRegister', Icon: PenIcon },
   { label: 'Transferências', navigateTo: 'PaymentsTransfer', Icon: TransferIcon },
   // { label: 'Histórico de Movimentações', navigateTo: 'PaymentsHistory', Icon: HistoryIcon },
@@ -30,11 +30,11 @@ const Payments: React.FC = () => {
   }, []);
 
   if (!isMounted) {
-    return <PrivateLayout screenName="Pagamentos"></PrivateLayout>;
+    return <PrivateLayout screenName="Financeiro" />;
   }
 
   return (
-    <PrivateLayout screenName="Pagamentos">
+    <PrivateLayout screenName="Financeiro">
       <FlatList
         data={optionsItems}
         keyExtractor={(item) => item.navigateTo}
