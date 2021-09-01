@@ -32,30 +32,56 @@ const SellProvider: React.FC = ({ children }) => {
 
   const addProductItem = React.useCallback(
     (receivedProduct: Product) => {
-      // verify if product is already selected
-      const productExists = selectedProducts.find((product) => product.id === receivedProduct.id);
+      // // verify if product is already selected
+      // const productExists = selectedProducts.find((product) => product.id === receivedProduct.id);
 
-      if (!productExists) {
-        // if product is not selected, merely adds it to selectedProducts array
-        setSelectedProducts([...selectedProducts, receivedProduct]);
-        return;
-      }
+      // if (!productExists) {
+      //   // if product is not selected, merely adds it to selectedProducts array
+      //   setSelectedProducts([...selectedProducts, receivedProduct]);
+      //   return;
+      // }
 
-      // if product is selected, iterate over selectedProducts array and increase the amount to the respective product
-      const newSelectedProducts = selectedProducts.map((product) => {
-        if (product.id === receivedProduct.id) {
-          return {
-            ...product,
-            amount: product.amount + 1,
-          };
+      // // if product is selected, iterate over selectedProducts array and increase the amount to the respective product
+      // const newSelectedProducts = selectedProducts.map((product) => {
+      //   if (product.id === receivedProduct.id) {
+      //     return {
+      //       ...product,
+      //       amount: product.amount + 1,
+      //     };
+      //   }
+
+      //   return product;
+      // });
+
+      // setSelectedProducts(newSelectedProducts);
+
+      setSelectedProducts((prevSelectedProducts) => {
+        // verify if product is already selected
+        const productExists = prevSelectedProducts.find(
+          (product) => product.id === receivedProduct.id
+        );
+
+        if (!productExists) {
+          // if product is not selected, merely adds it to selectedProducts array
+          return [...prevSelectedProducts, receivedProduct];
         }
 
-        return product;
-      });
+        // if product is selected, iterate over selectedProducts array and increase the amount to the respective product
+        const newSelectedProducts = prevSelectedProducts.map((product) => {
+          if (product.id === receivedProduct.id) {
+            return {
+              ...product,
+              amount: product.amount + 1,
+            };
+          }
 
-      setSelectedProducts(newSelectedProducts);
+          return product;
+        });
+
+        return newSelectedProducts;
+      });
     },
-    [selectedProducts]
+    [setSelectedProducts]
   );
 
   const removeProductItem = React.useCallback(
