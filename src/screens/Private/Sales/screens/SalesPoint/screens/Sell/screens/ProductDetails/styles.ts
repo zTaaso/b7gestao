@@ -1,3 +1,4 @@
+import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 // import { RectButton } from 'react-native-gesture-handler';
 
@@ -64,4 +65,19 @@ export const BlockContent = styled.View`
   border-bottom-width: 1px;
   border-bottom-color: rgba(255, 255, 255, 0.1);
   padding: 10px 0;
+`;
+
+export const SaveButtonContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+
+  padding: 5px 30px;
+`;
+
+export const SaveButton = styled(RectButton)`
+  /* border: 1px solid red; */
+  padding: 10px;
+  background-color: #30d88b;
+
+  border-radius: 10px;
 `;

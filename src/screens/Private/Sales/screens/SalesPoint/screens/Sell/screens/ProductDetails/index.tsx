@@ -15,6 +15,8 @@ import {
   FormContent,
   NotesInput,
   BlockContent,
+  SaveButtonContainer,
+  SaveButton,
 } from './styles';
 
 interface RouteParams extends ParamListBase {
@@ -32,6 +34,7 @@ const SalesPointSellProductDetails: React.FC = () => {
   // console.log({ productAmount });
 
   const editProductAmount = (value: number) => {
+    if (productAmount + value < 1) return;
     setProductAmount((prevValue) => prevValue + value);
   };
 
@@ -84,6 +87,14 @@ const SalesPointSellProductDetails: React.FC = () => {
             </CustomText>
           </FormContent>
         </BlockContent>
+
+        <SaveButtonContainer>
+          <SaveButton>
+            <CustomText font="Montserrat_Bold" color="#000">
+              Salvar
+            </CustomText>
+          </SaveButton>
+        </SaveButtonContainer>
       </Container>
     </PrivateLayout>
   );
