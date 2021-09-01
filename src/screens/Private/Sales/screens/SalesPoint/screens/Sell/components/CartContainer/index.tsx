@@ -29,6 +29,10 @@ const SalesPointCartContainer: React.FC = () => {
 
   console.log('cart container remontado');
 
+  const handleCartInfoPress = React.useCallback(() => {
+    setIsDetailsToggled(!isDetailsToggled);
+  }, [isDetailsToggled]);
+
   useEffect(() => {
     InteractionManager.runAfterInteractions(() => {
       setIsMounted(true);
@@ -64,7 +68,7 @@ const SalesPointCartContainer: React.FC = () => {
       </EntityContainer>
       <CartDetails isVisible={isDetailsToggled} />
       <CartContainer>
-        <CartInfo onPress={() => setIsDetailsToggled(!isDetailsToggled)}>
+        <CartInfo onPress={handleCartInfoPress}>
           <CartIconContainer>
             <Feather name="shopping-cart" size={28} color="#30D88B" />
           </CartIconContainer>
