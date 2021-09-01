@@ -1,4 +1,5 @@
 import React from 'react';
+import { InteractionManager } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -20,14 +21,15 @@ const CartProductItem: React.FC<CartProductItemProps> = ({ product }) => {
 
   const navigation = useNavigation();
 
-  console.log(`${product.name} renderizou`);
+  console.log(`item carrinho renderizou - ${product.name} `);
 
   const handlePress = React.useCallback(() => {
     // see product details
     navigation.navigate('SalesPointSellProductDetails', { product });
-
-    const [, setShouldShowCart] = showCartState;
-    setShouldShowCart(false);
+    InteractionManager.runAfterInteractions(() => {
+      const [, setShouldShowCart] = showCartState;
+      setShouldShowCart(false);
+    });
   }, [product, navigation]);
 
   const handleRemove = React.useCallback(async () => {
