@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { InteractionManager } from 'react-native';
 import formatToReal from '~/src/util/formatToReal';
 import Product from '../types/Product';
 
@@ -35,26 +36,6 @@ const SellProvider: React.FC = ({ children }) => {
       // // verify if product is already selected
       // const productExists = selectedProducts.find((product) => product.id === receivedProduct.id);
 
-      // if (!productExists) {
-      //   // if product is not selected, merely adds it to selectedProducts array
-      //   setSelectedProducts([...selectedProducts, receivedProduct]);
-      //   return;
-      // }
-
-      // // if product is selected, iterate over selectedProducts array and increase the amount to the respective product
-      // const newSelectedProducts = selectedProducts.map((product) => {
-      //   if (product.id === receivedProduct.id) {
-      //     return {
-      //       ...product,
-      //       amount: product.amount + 1,
-      //     };
-      //   }
-
-      //   return product;
-      // });
-
-      // setSelectedProducts(newSelectedProducts);
-
       setSelectedProducts((prevSelectedProducts) => {
         // verify if product is already selected
         const productExists = prevSelectedProducts.find(
@@ -86,7 +67,7 @@ const SellProvider: React.FC = ({ children }) => {
 
   const removeProductItem = React.useCallback(
     (receivedProduct: Product) => {
-      // return solely the product which the id is different from the received one
+      // return solely the products which the id is different from the received one
 
       console.log({ receivedProductName: receivedProduct.name, selectedProducts });
 
@@ -104,8 +85,6 @@ const SellProvider: React.FC = ({ children }) => {
   );
 
   React.useEffect(() => {
-    // console.log({ selectedProducts });
-
     function getAmountInfo() {
       let productsAmount = 0;
       let totalPrice = 0;
@@ -125,7 +104,7 @@ const SellProvider: React.FC = ({ children }) => {
       }));
     }
 
-    getAmountInfo(); // update cart info every time selectedProducts change;
+    InteractionManager.runAfterInteractions(getAmountInfo); // update cart info every time selectedProducts change;
   }, [selectedProducts]);
 
   const state = {
