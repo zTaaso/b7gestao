@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components/native';
 import { TextProps } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export interface StyledTextTypes extends TextProps {
   fontSize?: number | string;
